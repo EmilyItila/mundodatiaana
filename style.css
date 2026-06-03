@@ -377,5 +377,30 @@ footer{
 .faq-answer p{
   line-height:1.8;
 }
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    color:#bb4cff;
+}
 
+@media(max-width:900px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav ul{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+        margin-top:15px;
+    }
+
+    nav ul.active{
+        display:flex;
+    }
+}
 }
