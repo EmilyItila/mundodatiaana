@@ -282,7 +282,11 @@ footer{
 }
 
 /* CELULAR */
+@media(max-width:600px){
 
+  .faq-question{
+      font-size:0.95rem;
+  }
 @media(max-width:600px){
 
   .galeria-grid{
