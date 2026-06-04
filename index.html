@@ -415,15 +415,47 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     footer h3 {
       margin-bottom: 15px;
+      font-size: 1.2rem;
     }
 
     footer p {
       margin-bottom: 10px;
       line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .footer-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .footer-contact-item i {
+      font-size: 1.1rem;
+      min-width: 20px;
+    }
+
+    .footer-contact-item a {
+      color: white;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .footer-contact-item a:hover {
+      text-decoration: underline;
     }
 
     .social {
@@ -447,6 +479,7 @@
       margin-top: 40px;
       padding-top: 20px;
       border-top: 1px solid rgba(255, 255, 255, .3);
+      font-size: 0.9rem;
     }
 
     /* RESPONSIVO */
@@ -486,6 +519,10 @@
 
       iframe {
         height: 300px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -966,7 +1003,7 @@
 
       </div>
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.7896893721576!2d-37.06841!3d-5.190391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b1f3b8d3b8d3b8d%3A0x0!2sMundo%20da%20Tia%20Ana!5e0!3m2!1spt-BR!2sbr!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.7896893721576!2d-37.06841!3d-5.190391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b1f3b8d3b8d3b8d%3A0x0!2sMundo%2[...]
 
     </div>
 
@@ -978,61 +1015,88 @@
 
     <div class="footer-content">
 
-      <div>
+      <!-- Seção 1: Sobre -->
+      <div class="footer-section">
         <h3>Mundo da Tia Ana</h3>
         <p>
           Um espaço acolhedor, educativo e divertido para o desenvolvimento infantil.
         </p>
         <div class="social">
-          <a href="https://www.instagram.com/mundodatiaana_" target="_blank">
+          <a href="https://www.instagram.com/mundodatiaana_" target="_blank" title="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://wa.me/558498524505" target="_blank">
+          <a href="https://wa.me/558498524505" target="_blank" title="WhatsApp">
             <i class="fab fa-whatsapp"></i>
           </a>
         </div>
       </div>
 
-      <div>
+      <!-- Seção 2: Contato -->
+      <div class="footer-section">
         <h3>Contato</h3>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <a href="https://wa.me/558498524505" target="_blank">(84) 9852-4505</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:omundodatiaana@gmail.com">omundodatiaana@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- Seção 3: Endereço -->
+      <div class="footer-section">
+        <h3>Endereço</h3>
         <p>
-          WhatsApp: <a href="https://wa.me/558498524505" style="color: white; text-decoration: none;">
-            (84) 9852-4505
-          </a>
-        </p>
-        <p>
-          Instagram: <a href="https://www.instagram.com/mundodatiaana_" style="color: white; text-decoration: none;">
-            @mundodatiaana_
-          </a>
+          R. Juventino da Silveira, Nº 223<br>
+          CEP: 59380-000<br>
+          Currais Novos - RN<br>
+          Brasil
         </p>
       </div>
 
-      <div>
-        <h3>Horários</h3>
-        <p>
-          Seg-Sex: 07h30 - 12h00 e 13h30 - 18h00<br>
-          Sex à noite: 19h00 - 21h30<br>
-          Sáb manhã: 07h30 - 12h00<br>
-          Sáb à noite: 18h30 - 22h00
+      <!-- Seção 4: Funcionamento -->
+      <div class="footer-section">
+        <h3>Funcionamento</h3>
+        <p style="font-size: 0.9rem;">
+          <strong>Seg. a Sex.:</strong><br>
+          07h30 - 12h00 | 13h30 - 18h00
+        </p>
+        <p style="font-size: 0.9rem;">
+          <strong>Sex. à noite:</strong><br>
+          19h00 - 21h30
+        </p>
+        <p style="font-size: 0.9rem;">
+          <strong>Sábado:</strong><br>
+          07h30 - 12h00 | 18h30 - 22h00
         </p>
       </div>
 
     </div>
 
     <div class="copy">
-      <p>&copy; 2024 Mundo da Tia Ana. Todos os direitos reservados.</p>
+      <p>&copy; 2026 Mundo da Tia Ana - Todos os direitos reservados</p>
     </div>
 
   </footer>
 
   <script>
-    // FAQ Toggle Functionality
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-      const button = item.querySelector('.faq-question');
-      button.addEventListener('click', () => {
-        item.classList.toggle('active');
+    // FAQ Accordion
+    const faqButtons = document.querySelectorAll('.faq-question');
+    
+    faqButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const faqItem = this.parentElement;
+        
+        // Remove active de todos os itens
+        document.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== faqItem) {
+            item.classList.remove('active');
+          }
+        });
+        
+        // Toggle active no item clicado
+        faqItem.classList.toggle('active');
       });
     });
   </script>
