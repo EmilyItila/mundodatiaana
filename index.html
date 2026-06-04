@@ -483,6 +483,10 @@
       section {
         padding: 70px 5%;
       }
+
+      iframe {
+        height: 300px;
+      }
     }
   </style>
 </head>
@@ -722,7 +726,7 @@
           <span>Sócia-proprietária</span>
 
           <p>
-            Com a visão de que o envelhecimento saudável começa na infância, contribui para o desenvolvimento de experiências que promovem saúde, autonomia e qualidade de vida desde os primeiros anos.
+            Com a visão de que o envelhecimento saudável começa na infância, contribui para o desenvolvimento de experiências que promovem saúde, autonomia e qualidade de vida desde os prim[...]
           </p>
 
         </div>
@@ -940,9 +944,37 @@
 
   </section>
 
+  <!-- LOCALIZAÇÃO -->
+
+  <section id="localizacao">
+
+    <div class="section-title">
+
+      <h2>Localização</h2>
+
+      <p>
+        Visite nosso espaço
+      </p>
+
+    </div>
+
+    <div class="location">
+
+      <div class="location-info">
+
+        <h3>Mundo da Tia Ana</h3>
+
+      </div>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.7896893721576!2d-37.06841!3d-5.190391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b1f3b8d3b8d3b8d%3A0x0!2sMundo%20da%20Tia%20Ana!5e0!3m2!1spt-BR!2sbr!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+  </section>
+
   <!-- FOOTER -->
 
-  <footer id="localizacao">
+  <footer>
 
     <div class="footer-content">
 
@@ -998,17 +1030,8 @@
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
-      const question = item.querySelector('.faq-question');
-
-      question.addEventListener('click', () => {
-        // Remove active class from all items
-        faqItems.forEach(otherItem => {
-          if (otherItem !== item) {
-            otherItem.classList.remove('active');
-          }
-        });
-
-        // Toggle active class on clicked item
+      const button = item.querySelector('.faq-question');
+      button.addEventListener('click', () => {
         item.classList.toggle('active');
       });
     });
