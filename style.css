@@ -75,7 +75,6 @@ nav a{
   justify-content:center;
   gap:20px;
   flex-wrap:wrap;
-  
 }
 
 .btn{
@@ -191,7 +190,6 @@ footer{
   margin-top:30px;
 }
 
-
 /* FAQ */
 
 .faq-container{
@@ -216,7 +214,6 @@ footer{
   font-weight:600;
   text-align:left;
   cursor:pointer;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -239,13 +236,24 @@ footer{
   color:#666;
 }
 
+.faq-answer a{
+  color:#bb4cff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.faq-answer a:hover{
+  text-decoration:underline;
+}
+
 .faq-item.active .faq-answer{
-  max-height:200px;
+  max-height:500px;
 }
 
 .faq-item.active .faq-question span{
   transform:rotate(45deg);
 }
+
 /* GALERIA */
 
 .galeria-grid{
@@ -271,23 +279,83 @@ footer{
   display:block;
 }
 
-/* TABLET */
+.menu-toggle{
+  display:none;
+  font-size:32px;
+  cursor:pointer;
+  color:#bb4cff;
+}
+
+/* RESPONSIVO TABLET */
 
 @media(max-width:1000px){
-
   .galeria-grid{
     grid-template-columns:repeat(2,220px);
   }
-
 }
 
-/* CELULAR */
-@media(max-width:600px){
-
-  .faq-question{
-      font-size:0.95rem;
+@media(max-width:900px){
+  .galeria-container{
+    grid-template-columns:repeat(2,1fr);
   }
+
+  .history{
+    grid-template-columns:1fr;
+  }
+
+  nav ul{
+    display:none;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  nav ul.active{
+    display:flex;
+    width:100%;
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+    margin-top:15px;
+  }
+
+  .hero h1{
+    font-size:2.5rem;
+  }
+
+  #faq,
+  #localizacao,
+  #sobre,
+  #servicos,
+  #equipe,
+  #formularios{
+    scroll-margin-top:120px;
+  }
+}
+
+@media(max-width:768px){
+  .galeria-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .galeria-card img{
+    height:140px;
+  }
+}
+
+@media(max-width:700px){
+  .team{
+    grid-template-columns:1fr;
+  }
+}
+
+/* RESPONSIVO CELULAR */
+
 @media(max-width:600px){
+  .faq-question{
+    font-size:0.95rem;
+  }
 
   .galeria-grid{
     grid-template-columns:1fr;
@@ -299,73 +367,6 @@ footer{
     margin:auto;
   }
 
-}
-/* RESPONSIVO */
-
-@media(max-width:900px){
-
-  .galeria-container{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-}
-
-@media(max-width:600px){
-
-  .galeria-container{
-    grid-template-columns:1fr;
-  }
-
-}
-
-@media(max-width:700px){
-
-  .team{
-    grid-template-columns:1fr;
-  }
-
-}
-
-@media(max-width:900px){
-
-  .history{
-    grid-template-columns:1fr;
-  }
-
-  nav ul{
-    display:none;
-  }
-
-  .hero h1{
-    font-size:2.5rem;
-  }
-  #faq,
-  #localizacao,
-  #sobre,
-  #servicos,
-  #equipe,
-  #formularios{
-    scroll-margin-top:120px;
-  }
-
-  /* CELULAR */
-
-@media(max-width:768px){
-
-  .galeria-container{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .galeria-card img{
-    height:140px;
-  }
-
-}
-
-/* TELAS MUITO PEQUENAS */
-
-@media(max-width:500px){
-
   .galeria-container{
     grid-template-columns:1fr;
   }
@@ -374,37 +375,15 @@ footer{
     height:200px;
   }
 }
-.faq-answer a{
-  word-break:break-word;
-}
 
-.faq-answer p{
-  line-height:1.8;
-}
-.menu-toggle{
-    display:none;
-    font-size:32px;
-    cursor:pointer;
-    color:#bb4cff;
-}
+/* TELAS MUITO PEQUENAS */
 
-@media(max-width:900px){
+@media(max-width:500px){
+  .galeria-container{
+    grid-template-columns:1fr;
+  }
 
-    .menu-toggle{
-        display:block;
-    }
-
-    nav ul{
-        display:none;
-        width:100%;
-        flex-direction:column;
-        text-align:center;
-        gap:15px;
-        margin-top:15px;
-    }
-
-    nav ul.active{
-        display:flex;
-    }
-}
+  .galeria-card img{
+    height:200px;
+  }
 }
