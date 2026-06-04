@@ -304,8 +304,7 @@
       color: #666;
     }
 
-   
-        /* LOCALIZAÇÃO */
+    /* LOCALIZAÇÃO */
 
     .location {
       background: #f7efff;
@@ -329,6 +328,79 @@
       height: 400px;
       border: none;
       border-radius: 20px;
+    }
+
+    /* FAQ */
+
+    .faq-container {
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: white;
+      border: none;
+      outline: none;
+      padding: 22px 25px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #444;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .faq-question:hover {
+      background: #faf3ff;
+    }
+
+    .faq-question span {
+      font-size: 1.5rem;
+      color: #bb4cff;
+      transition: .3s;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease;
+    }
+
+    .faq-answer p {
+      padding: 0 25px 25px;
+      color: #666;
+      line-height: 1.8;
+    }
+
+    .faq-answer a {
+      color: #bb4cff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .faq-answer a:hover {
+      text-decoration: underline;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-item.active .faq-question span {
+      transform: rotate(45deg);
     }
 
     /* FOOTER */
@@ -426,18 +498,13 @@
       <div class="logo">Mundo da Tia Ana</div>
 
       <ul>
-
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#equipe">Equipe</a></li>
         <li><a href="#formularios">Formulários</a></li>
-         <li><a href="#faq">FAQ</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#localizacao">Localização</a></li>
-
-
-
-</ul>
-   
+      </ul>
 
     </nav>
 
@@ -487,8 +554,7 @@
 
     <div class="history">
 
-      <img src="img/mundo da tia.jpeg" alt=""/>
-
+      <img src="img/mundo da tia.jpeg" alt="Mundo da Tia Ana" />
 
       <div class="history-text">
 
@@ -629,7 +695,7 @@
 
       <div class="member">
 
-        <img src="img/tia ana - Copia.jpeg" alt="">
+        <img src="img/tia ana - Copia.jpeg" alt="Tia Ana">
 
         <div class="member-info">
 
@@ -642,11 +708,13 @@
           </p>
 
         </div>
-        
-          </div>
-            <div class="member">
 
-        <img src="img/renata.jpeg" alt="">
+      </div>
+
+      <div class="member">
+
+        <img src="img/renata.jpeg" alt="Renata Jesuino">
+
         <div class="member-info">
 
           <h3>Renata Jesuino</h3>
@@ -654,24 +722,24 @@
           <span>Sócia-proprietária</span>
 
           <p>
-           Com a visão de que o envelhecimento saudável começa na infância, contribui para o desenvolvimento de experiências que promovem saúde, autonomia e qualidade de vida desde os primeiros anos.
-
+            Com a visão de que o envelhecimento saudável começa na infância, contribui para o desenvolvimento de experiências que promovem saúde, autonomia e qualidade de vida desde os primeiros anos.
           </p>
 
         </div>
+
       </div>
 
       <div class="member">
 
-        <img src="img/equipe.jpeg" alt="">
+        <img src="img/equipe.jpeg" alt="Auxiliares e Cuidadoras">
 
         <div class="member-info">
+
           <h3>Auxiliares/Cuidadoras</h3>
 
-    <p>
-     Profissionais dedicadas ao cuidado e bem-estar das crianças, oferecendo atenção, carinho e suporte durante as atividades diárias.
-    </p>
-          
+          <p>
+            Profissionais dedicadas ao cuidado e bem-estar das crianças, oferecendo atenção, carinho e suporte durante as atividades diárias.
+          </p>
 
         </div>
 
@@ -679,9 +747,7 @@
 
     </div>
 
-    </div>
-
-</section>
+  </section>
 
   <!-- FORMULÁRIOS -->
 
@@ -709,9 +775,7 @@
         </p>
 
         <a href="https://forms.gle/fzq4DMiEQsBugyKc6" target="_blank" class="btn btn-primary">
-
           Fazer Inscrição
-
         </a>
 
       </div>
@@ -725,326 +789,152 @@
         </p>
 
         <a href="https://forms.gle/GTNbdZgagXN9nngRA" target="_blank" class="btn btn-secondary">
-
           Agendar Visita
-
         </a>
 
       </div>
 
     </div>
-    </section>
-</section>
 
+  </section>
 
   <!-- FAQ -->
 
-<section id="faq">
-
-  <div class="section-title">
-
-    <h2>Perguntas Frequentes</h2>
-
-    <p>
-      Tire suas dúvidas sobre o Mundo da Tia Ana
-    </p>
-
-  </div>
-
-  <div class="faq-container">
-
-    <div class="faq-item">
-
-      <button class="faq-question">
-        Qual é o valor da hora?
-        <span>+</span>
-      </button>
-
-      <div class="faq-answer">
-        <p>
-          20 reais por hora.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="faq-item">
-
-      <button class="faq-question">
-        Vocês fazem pacote?
-        <span>+</span>
-      </button>
-
-      <div class="faq-answer">
-        <p>
-          Sim. Temos 10% de desconto na mensalidade para irmãos.
-          Um irmão paga o valor normal e o outro recebe 10% de desconto.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="faq-item">
-
-      <button class="faq-question">
-        Vocês recebem a partir de que idade?
-        <span>+</span>
-      </button>
-
-      <div class="faq-answer">
-        <p>
-          A partir de 11 meses até 11 anos.
-        </p>
-      </div>
-
-
-    <div class="faq-item">
-
-      <button class="faq-question">
-        Como agendar visita?
-        <span>+</span>
-      </button>
-
-      <div class="faq-answer">
-        <p>
-          Temos um formulário de visita.<br><br>
-          As visitas acontecem somente no período da manhã.
-        </p>
-      </div>
-
-    <div class="faq-item">
-
-      <button class="faq-question">
-        Como funcionam as oficinas?
-        <span>+</span>
-      </button>
-
-      <div class="faq-answer">
-        <p>
-          As oficinas são realizadas de forma lúdica e educativa,
-          com atividades recreativas, acompanhamento infantil,
-          dinâmicas em grupo e estímulos ao desenvolvimento social,
-          emocional e criativo das crianças.
-        </p>
-      </div>
-
-
-    <div class="faq-item">
-
-      <button class="faq-question">
-        Qual é a metodologia utilizada?
-        <span>+</span>
-      </button>
-
-      <div class="faq-answer">
-        <p>
-          Nossa metodologia valoriza o desenvolvimento infantil
-          através do acolhimento, da criatividade, da convivência social
-          e do aprendizado por meio de experiências lúdicas e educativas.
-        </p>
-      </div>
-      
-      <div>
-          <div class="faq-item">
-
-      <button class="faq-question">
-        
-       Quais são os horários de funcionamento?
-        <span>+</span>
-        
-      </button>
-
-      <div class="faq-answer">
-        
-       <p>
-De segunda a sexta-feira:<br>
-07h30 às 12h00 e 13h30 às 18h00.
-
-<br><br>
-
-Sexta-feira à noite:<br>
-19h00 às 21h30.
-
-<br><br>
-
-Sábado pela manhã:<br>
-07h30 às 12h00.
-
-<br><br>
-
-Sábado à noite:<br>
-18h30 às 22h00.
-</p>
-    </div>
-            
-
-    <div class="faq-item">
-
-      <button class="faq-question">
-        Quais são os contatos da instituição?
-        <span>+</span>
-      </button>
-
-      <div class="faq-answer">
-        
-  <p>
-
-  Instagram:
-  <a href="https://www.instagram.com/mundodatiaana_"
-     target="_blank">
-
-     @mundodatiaana_
-
-  </a>
-
-  <br><br>
-
-  WhatsApp:
-  <a href="https://wa.me/558498524505"
-     target="_blank">
-
-     (84) 9852-4505
-
-  </a>
-
-</p>
-  </a>
-
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<style>
-
-/* FAQ */
-
-.faq-container{
-  max-width:900px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-}
-
-.faq-item{
-  background:white;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.faq-question{
-  width:100%;
-  background:white;
-  border:none;
-  outline:none;
-  padding:22px 25px;
-  font-size:1.05rem;
-  font-weight:600;
-  color:#444;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  cursor:pointer;
-  transition:.3s;
-}
-
-.faq-question:hover{
-  background:#faf3ff;
-}
-
-.faq-question span{
-  font-size:1.5rem;
-  color:#bb4cff;
-  transition:.3s;
-}
-
-.faq-answer{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height .4s ease;
-}
-
-.faq-answer p{
-  padding:0 25px 25px;
-  color:#666;
-  line-height:1.8;
-}
-
-.faq-item.active .faq-answer{
-  max-height:300px;
-}
-
-.faq-item.active .faq-question span{
-  transform:rotate(45deg);
-}
-
-</style>
-
-<script>
-
-/* FAQ */
-
-const faqItems = document.querySelectorAll('.faq-item');
-
-faqItems.forEach(item => {
-
-  const question = item.querySelector('.faq-question');
-
-  question.addEventListener('click', () => {
-
-    item.classList.toggle('active');
-
-  });
-
-});
-
-</script>
-
-  <!-- LOCALIZAÇÃO -->
-
-  <section id="localizacao">
+  <section id="faq">
 
     <div class="section-title">
 
-      <h2>Localização</h2>
+      <h2>Perguntas Frequentes</h2>
 
       <p>
-        Venha conhecer nosso espaço
+        Tire suas dúvidas sobre o Mundo da Tia Ana
       </p>
 
+    </div>
+
+    <div class="faq-container">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Qual é o valor da hora?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            20 reais por hora.
+          </p>
+        </div>
       </div>
 
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.990451604475!2d-36.51678232424299!3d-6.264985161335389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b1d604f27e8017%3A0x1a3e9999e1ae03d1!2sR.%20Juventino%20da%20Silveira%2C%20223%2C%20Currais%20Novos%20-%20RN%2C%2059380-000!5e0!3m2!1sen!2sbr!4v1779845943328!5m2!1sen!2sbr"
-    
-    allowfullscreen=""
-     referrerpolicy="no-referrer-when-downgrade">
-    
-  </iframe>
+      <div class="faq-item">
+        <button class="faq-question">
+          Vocês fazem pacote?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Sim. Temos 10% de desconto na mensalidade para irmãos.
+            Um irmão paga o valor normal e o outro recebe 10% de desconto.
+          </p>
+        </div>
+      </div>
 
-</section>
-    <div class="location">
+      <div class="faq-item">
+        <button class="faq-question">
+          Vocês recebem a partir de que idade?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            A partir de 11 meses até 11 anos.
+          </p>
+        </div>
+      </div>
 
-      <div class="location-info">
+      <div class="faq-item">
+        <button class="faq-question">
+          Como agendar visita?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Temos um formulário de visita.<br><br>
+            As visitas acontecem somente no período da manhã.
+          </p>
+        </div>
+      </div>
 
-        <h3>Mundo da Tia Ana</h3>
+      <div class="faq-item">
+        <button class="faq-question">
+          Como funcionam as oficinas?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            As oficinas são realizadas de forma lúdica e educativa,
+            com atividades recreativas, acompanhamento infantil,
+            dinâmicas em grupo e estímulos ao desenvolvimento social,
+            emocional e criativo das crianças.
+          </p>
+        </div>
+      </div>
 
-        <p>
-          Currais Novos - RN
-        </p>
+      <div class="faq-item">
+        <button class="faq-question">
+          Qual é a metodologia utilizada?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Nossa metodologia valoriza o desenvolvimento infantil
+            através do acolhimento, da criatividade, da convivência social
+            e do aprendizado por meio de experiências lúdicas e educativas.
+          </p>
+        </div>
+      </div>
 
-        
-        <p>
-          Atendimento mediante agendamento.
-        </p>
+      <div class="faq-item">
+        <button class="faq-question">
+          Quais são os horários de funcionamento?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            De segunda a sexta-feira:<br>
+            07h30 às 12h00 e 13h30 às 18h00.<br><br>
+            
+            Sexta-feira à noite:<br>
+            19h00 às 21h30.<br><br>
+            
+            Sábado pela manhã:<br>
+            07h30 às 12h00.<br><br>
+            
+            Sábado à noite:<br>
+            18h30 às 22h00.
+          </p>
+        </div>
+      </div>
 
-      
+      <div class="faq-item">
+        <button class="faq-question">
+          Quais são os contatos da instituição?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Instagram:
+            <a href="https://www.instagram.com/mundodatiaana_" target="_blank">
+              @mundodatiaana_
+            </a>
+            <br><br>
+            
+            WhatsApp:
+            <a href="https://wa.me/558498524505" target="_blank">
+              (84) 9852-4505
+            </a>
+          </p>
+        </div>
+      </div>
 
     </div>
 
@@ -1052,128 +942,76 @@ faqItems.forEach(item => {
 
   <!-- FOOTER -->
 
-  <footer>
+  <footer id="localizacao">
 
     <div class="footer-content">
 
       <div>
-
-        <h3>Contato</h3>
-
-        <p>📞 (84) 9852-4505</p>
-
-        <p>📧 omundodatiaana@gmail.com</p>
-        
-
-      </div>
-
-      <div>
-
-        <h3>Redes Sociais</h3>
-
+        <h3>Mundo da Tia Ana</h3>
+        <p>
+          Um espaço acolhedor, educativo e divertido para o desenvolvimento infantil.
+        </p>
         <div class="social">
-
-          <a href="https://www.instagram.com/mundodatiaana_" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/mundodatiaana_" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
-
-          <a href="https://wa.me/558498524505" target="_blank" rel="noopener noreferrer" class="whatsapp">
+          <a href="https://wa.me/558498524505" target="_blank">
             <i class="fab fa-whatsapp"></i>
           </a>
-
-
-
         </div>
-
       </div>
 
       <div>
-
-        <h3>Endereço</h3>
-
-         <p>
-         R. Juventino da Silveira, Nº 223 ,Cep: 59380-000
-        </p>
-
+        <h3>Contato</h3>
         <p>
-          Currais Novos - RN
+          WhatsApp: <a href="https://wa.me/558498524505" style="color: white; text-decoration: none;">
+            (84) 9852-4505
+          </a>
         </p>
-
         <p>
-          Brasil
+          Instagram: <a href="https://www.instagram.com/mundodatiaana_" style="color: white; text-decoration: none;">
+            @mundodatiaana_
+          </a>
         </p>
+      </div>
 
+      <div>
+        <h3>Horários</h3>
+        <p>
+          Seg-Sex: 07h30 - 12h00 e 13h30 - 18h00<br>
+          Sex à noite: 19h00 - 21h30<br>
+          Sáb manhã: 07h30 - 12h00<br>
+          Sáb à noite: 18h30 - 22h00
+        </p>
       </div>
 
     </div>
 
-
-     <div>
-
-        <h3>Funcionamento</h3>
-<p>
-De segunda a sexta-feira:<br>
-07h30 às 12h00 e 13h30 às 18h00.
-
-<br><br>
-
-Sexta-feira à noite:<br>
-19h00 às 21h30.
-
-<br><br>
-
-Sábado pela manhã:<br>
-07h30 às 12h00.
-
-<br><br>
-
-Sábado à noite:<br>
-18h30 às 22h00.
-</p>
-  
-      </div>
-
     <div class="copy">
-
-      © 2026 Mundo da Tia Ana - Todos os direitos reservados
-
+      <p>&copy; 2024 Mundo da Tia Ana. Todos os direitos reservados.</p>
     </div>
 
   </footer>
 
-  <!-- JAVASCRIPT -->
-
   <script>
+    // FAQ Toggle Functionality
+    const faqItems = document.querySelectorAll('.faq-item');
 
-    // animação simples ao rolar página
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
 
-    const cards = document.querySelectorAll('.card, .member, .form-card');
+      question.addEventListener('click', () => {
+        // Remove active class from all items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
 
-    const observer = new IntersectionObserver((entries) => {
-
-      entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-
-        }
-
+        // Toggle active class on clicked item
+        item.classList.toggle('active');
       });
-
     });
-
-    cards.forEach(card => {
-
-      card.style.opacity = 0;
-      card.style.transform = 'translateY(40px)';
-      card.style.transition = '0.6s ease';
-
-      observer.observe(card);
-
-    });
-
   </script>
 
 </body>
