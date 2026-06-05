@@ -129,6 +129,7 @@
       text-decoration: none;
       font-weight: 600;
       transition: .3s;
+      display: inline-block;
     }
 
     .btn-primary {
@@ -436,6 +437,16 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+    }
+
+    .footer-section a {
+      color: white;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .footer-section a:hover {
+      text-decoration: underline;
     }
 
     .footer-contact-item {
@@ -790,7 +801,7 @@
           <span>Sócia-proprietária</span>
 
           <p>
-            Com a visão de que o envelhecimento saudável começa na infância, contribui para o desenvolvimento de experiências que promovem saúde, autonomia e qualidade de vida desde os primeiros[...]
+            Com a visão de que o envelhecimento saudável começa na infância, contribui para o desenvolvimento de experiências que promovem saúde, autonomia e qualidade de vida desde os primeiros anos.
           </p>
 
         </div>
@@ -998,8 +1009,8 @@
             <br><br>
             
             WhatsApp:
-            <a href="https://wa.me/558498524505" target="_blank">
-              (84) 9852-4505
+            <a href="https://wa.me/5562987654321" target="_blank">
+              +55 (62) 98765-4321
             </a>
           </p>
         </div>
@@ -1013,34 +1024,80 @@
 
   <section id="localizacao">
 
-    <div class="section-title">
     <div class="location">
 
       <div class="location-info">
-        
-      <h2>Localização</h2>
+        <h3>📍 Localização</h3>
+        <p>Visite-nos em nosso espaço acolhedor</p>
+      </div>
 
-      <p>
-        Visite nosso espaço
-      </p>
-
-    </div>
-
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.696306068045!2d-35.19764382389826!3d-5.783568560631947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff57e3e3e3e3d%3A0x3e3e3e3e3e3e3e3e!2sMundo%20da%20Tia%20Ana!5e0!3m2!1spt-BR!2sbr!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-    </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.5937463547647!2d-49.256!3d-15.793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ff2b7e7e7e7e7%3A0x0!2zMTXCsDQ3JzQ3LjciUyA0OcKwMTUnMjQuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </div>
 
   </section>
 
-  <script>
-    const faqItems = document.querySelectorAll('.faq-item');
+  <!-- FOOTER -->
 
-    faqItems.forEach(item => {
-      const question = item.querySelector('.faq-question');
-      question.addEventListener('click', () => {
-        item.classList.toggle('active');
+  <footer>
+
+    <div class="footer-content">
+
+      <div class="footer-section">
+        <h3>Mundo da Tia Ana</h3>
+        <p>
+          Um espaço acolhedor, educativo e divertido para o desenvolvimento infantil.
+        </p>
+        <div class="social">
+          <a href="https://www.instagram.com/mundodatiaana_" target="_blank" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/5562987654321" target="_blank" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Menu</h3>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#formularios">Formulários</a>
+        <a href="#faq">FAQ</a>
+        <a href="#localizacao">Localização</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contato</h3>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-map-pin"></i>
+          <span>Goiânia, GO</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+5562987654321">+55 (62) 98765-4321</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:contato@mundodatiaana.com">contato@mundodatiaana.com</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copy">
+      <p>&copy; 2024 Mundo da Tia Ana. Todos os direitos reservados.</p>
+    </div>
+
+  </footer>
+
+  <!-- SCRIPT FAQ -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        faqItem.classList.toggle('active');
       });
     });
   </script>
