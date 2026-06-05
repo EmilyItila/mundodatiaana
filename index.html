@@ -371,6 +371,8 @@
       font-size: 1.5rem;
       color: #bb4cff;
       transition: .3s;
+      flex-shrink: 0;
+      margin-left: 15px;
     }
 
     .faq-answer {
@@ -523,6 +525,31 @@
 
       .footer-content {
         grid-template-columns: 1fr;
+      }
+
+      /* FAQ Responsivo */
+      .faq-question {
+        padding: 18px 15px;
+        font-size: 0.95rem;
+        flex-wrap: wrap;
+      }
+
+      .faq-question span {
+        font-size: 1.3rem;
+        margin-left: 10px;
+      }
+
+      .faq-answer p {
+        padding: 0 15px 20px;
+        font-size: 0.95rem;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 800px;
+      }
+
+      .faq-container {
+        gap: 15px;
       }
     }
   </style>
@@ -763,7 +790,7 @@
           <span>Sócia-proprietária</span>
 
           <p>
-            Com a visão de que o envelhecimento saudável começa na infância, contribui para o desenvolvimento de experiências que promovem saúde, autonomia e qualidade de vida desde os primeiros anos de vida.
+            Com a visão de que o envelhecimento saudável começa na infância, contribui para o desenvolvimento de experiências que promovem saúde, autonomia e qualidade de vida desde os primeiros[...]
           </p>
 
         </div>
@@ -999,100 +1026,21 @@
 
     </div>
 
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.696306068045!2d-35.19764382389826!3d-5.783568560631947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff57e3e3e3e3d%3A0x3e3e3e3e3e3e3e3e!2sMundo%20da%20Tia%20Ana!5e0!3m2!1spt-BR!2sbr!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-      </div>
-
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9904516045062!2d-36.51678232623913!3d-6.26498516133124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b1d604f27e8017%3A0x1a3e9999e1ae03d1!2sR.%20Juventino%20da%20Silveira%2C%20223%2C%20Currais%20Novos%20-%20RN%2C%2059380-000!5e0!3m2!1spt-BR!2sbr!4v1780616082933!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
     </div>
 
   </section>
 
-  <!-- FOOTER -->
-
-  <footer>
-
-    <div class="footer-content">
-
-      <!-- Seção 1: Sobre -->
-      <div class="footer-section">
-        <h3>Redes Sociais</h3>
-        <div class="social">
-          <a href="https://www.instagram.com/mundodatiaana_" target="_blank" title="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://wa.me/558498524505" target="_blank" title="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Seção 2: Contato -->
-      <div class="footer-section">
-        <h3>Contato</h3>
-        <div class="footer-contact-item">
-          <i class="fas fa-phone"></i>
-          <a href="https://wa.me/558498524505" target="_blank">(84) 99852-4505</a>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:omundodatiaana@gmail.com">omundodatiaana@gmail.com</a>
-        </div>
-      </div>
-
-      <!-- Seção 3: Endereço -->
-      <div class="footer-section">
-        <h3>Endereço</h3>
-        <p>
-          R. Juventino da Silveira, nº 223<br>
-          CEP: 59380-000<br>
-          Currais Novos - RN<br>
-          Brasil
-        </p>
-      </div>
-
-      <!-- Seção 4: Funcionamento -->
-      <div class="footer-section">
-        <h3>Funcionamento</h3>
-        <p style="font-size: 0.9rem;">
-          <strong>Seg. a Sex.:</strong><br>
-          07h30 - 12h00 | 13h30 - 18h00
-        </p>
-        <p style="font-size: 0.9rem;">
-          <strong>Sex. à noite:</strong><br>
-          19h00 - 21h30
-        </p>
-        <p style="font-size: 0.9rem;">
-          <strong>Sábado:</strong><br>
-          07h30 - 12h00 | 18h30 - 22h00
-        </p>
-      </div>
-
-    </div>
-
-    <div class="copy">
-      <p>&copy; 2026 Mundo da Tia Ana - Todos os direitos reservados</p>
-    </div>
-
-  </footer>
-
   <script>
-    // FAQ Accordion
-    const faqButtons = document.querySelectorAll('.faq-question');
-    
-    faqButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const faqItem = this.parentElement;
-        
-        // Remove active de todos os itens
-        document.querySelectorAll('.faq-item').forEach(item => {
-          if (item !== faqItem) {
-            item.classList.remove('active');
-          }
-        });
-        
-        // Toggle active no item clicado
-        faqItem.classList.toggle('active');
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
       });
     });
   </script>
