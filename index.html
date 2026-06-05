@@ -417,58 +417,48 @@
     .footer-content {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      gap: 40px;
       max-width: 1200px;
       margin: auto;
+      margin-bottom: 40px;
     }
 
-    footer h3 {
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-    }
-
-    footer p {
-      margin-bottom: 10px;
-      line-height: 1.7;
-      font-size: 0.95rem;
+    .footer-section h3 {
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      font-weight: 600;
     }
 
     .footer-section {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 15px;
     }
 
     .footer-section a {
       color: white;
       text-decoration: none;
       transition: .3s;
+      font-size: 0.95rem;
     }
 
     .footer-section a:hover {
+      opacity: 0.8;
       text-decoration: underline;
     }
 
-    .footer-contact-item {
+    .footer-item {
       display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
 
-    .footer-contact-item i {
-      font-size: 1.1rem;
-      min-width: 20px;
-    }
-
-    .footer-contact-item a {
-      color: white;
-      text-decoration: none;
-      transition: .3s;
-    }
-
-    .footer-contact-item a:hover {
-      text-decoration: underline;
+    .footer-item i {
+      font-size: 1.2rem;
+      min-width: 24px;
+      margin-top: 2px;
     }
 
     .social {
@@ -479,7 +469,7 @@
 
     .social a {
       color: white;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       transition: .3s;
     }
 
@@ -489,8 +479,7 @@
 
     .copy {
       text-align: center;
-      margin-top: 40px;
-      padding-top: 20px;
+      padding-top: 30px;
       border-top: 1px solid rgba(255, 255, 255, .3);
       font-size: 0.9rem;
     }
@@ -536,6 +525,7 @@
 
       .footer-content {
         grid-template-columns: 1fr;
+        gap: 30px;
       }
 
       /* FAQ Responsivo */
@@ -980,17 +970,14 @@
         </button>
         <div class="faq-answer">
           <p>
-            De segunda a sexta-feira:<br>
-            07h30 às 12h00 e 13h30 às 18h00.<br><br>
+            <strong>Seg. a Sex.:</strong><br>
+            07h30 - 12h00 | 13h30 - 18h00<br><br>
             
-            Sexta-feira à noite:<br>
-            19h00 às 21h30.<br><br>
+            <strong>Sex. à noite:</strong><br>
+            19h00 - 21h30<br><br>
             
-            Sábado pela manhã:<br>
-            07h30 às 12h00.<br><br>
-            
-            Sábado à noite:<br>
-            18h30 às 22h00.
+            <strong>Sábado:</strong><br>
+            07h30 - 12h00 | 18h30 - 22h00
           </p>
         </div>
       </div>
@@ -1002,16 +989,12 @@
         </button>
         <div class="faq-answer">
           <p>
-            Instagram:
-            <a href="https://www.instagram.com/mundodatiaana_" target="_blank">
-              @mundodatiaana_
-            </a>
+            <strong>Telefone:</strong><br>
+            <a href="tel:+558499852-4505">(84) 99852-4505</a>
             <br><br>
             
-            WhatsApp:
-            <a href="https://wa.me/5562987654321" target="_blank">
-              +55 (62) 98765-4321
-            </a>
+            <strong>Email:</strong><br>
+            <a href="mailto:omundodatiaana@gmail.com">omundodatiaana@gmail.com</a>
           </p>
         </div>
       </div>
@@ -1024,14 +1007,18 @@
 
   <section id="localizacao">
 
+    <div class="section-title">
+      <h2>Localização</h2>
+      <p>Visite-nos em nosso espaço acolhedor</p>
+    </div>
+
     <div class="location">
 
       <div class="location-info">
-        <h3>📍 Localização</h3>
-        <p>Visite-nos em nosso espaço acolhedor</p>
+        <h3>📍 Onde nos encontrar</h3>
       </div>
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.5937463547647!2d-49.256!3d-15.793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ff2b7e7e7e7e7%3A0x0!2zMTXCsDQ3JzQ3LjciUyA0OcKwMTUnMjQuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8567485205395!2d-36.6035!3d-6.4024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c5baa0c0c0c0c0d%3A0x0!2sMundo%20da%20Tia%20Ana!5e0!3m2!1spt-BR!2sbr!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </div>
 
@@ -1043,51 +1030,65 @@
 
     <div class="footer-content">
 
+      <!-- Redes Sociais -->
       <div class="footer-section">
-        <h3>Mundo da Tia Ana</h3>
-        <p>
-          Um espaço acolhedor, educativo e divertido para o desenvolvimento infantil.
-        </p>
+        <h3>Redes Sociais</h3>
         <div class="social">
           <a href="https://www.instagram.com/mundodatiaana_" target="_blank" title="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://wa.me/5562987654321" target="_blank" title="WhatsApp">
+          <a href="https://wa.me/5584998524505" target="_blank" title="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
         </div>
       </div>
 
-      <div class="footer-section">
-        <h3>Menu</h3>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#equipe">Equipe</a>
-        <a href="#formularios">Formulários</a>
-        <a href="#faq">FAQ</a>
-        <a href="#localizacao">Localização</a>
-      </div>
-
+      <!-- Contato -->
       <div class="footer-section">
         <h3>Contato</h3>
-        <div class="footer-contact-item">
-          <i class="fa-solid fa-map-pin"></i>
-          <span>Goiânia, GO</span>
-        </div>
-        <div class="footer-contact-item">
+        <div class="footer-item">
           <i class="fa-solid fa-phone"></i>
-          <a href="tel:+5562987654321">+55 (62) 98765-4321</a>
+          <a href="tel:+5584998524505">(84) 99852-4505</a>
         </div>
-        <div class="footer-contact-item">
+        <div class="footer-item">
           <i class="fa-solid fa-envelope"></i>
-          <a href="mailto:contato@mundodatiaana.com">contato@mundodatiaana.com</a>
+          <a href="mailto:omundodatiaana@gmail.com">omundodatiaana@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- Endereço -->
+      <div class="footer-section">
+        <h3>Endereço</h3>
+        <div class="footer-item">
+          <i class="fa-solid fa-map-pin"></i>
+          <div>
+            R. Juventino da Silveira, nº 223<br>
+            CEP: 59380-000<br>
+            Currais Novos - RN<br>
+            Brasil
+          </div>
+        </div>
+      </div>
+
+      <!-- Funcionamento -->
+      <div class="footer-section">
+        <h3>Funcionamento</h3>
+        <div class="footer-item">
+          <div>
+            <strong>Seg. a Sex.:</strong><br>
+            07h30 - 12h00 | 13h30 - 18h00<br><br>
+            <strong>Sex. à noite:</strong><br>
+            19h00 - 21h30<br><br>
+            <strong>Sábado:</strong><br>
+            07h30 - 12h00 | 18h30 - 22h00
+          </div>
         </div>
       </div>
 
     </div>
 
     <div class="copy">
-      <p>&copy; 2024 Mundo da Tia Ana. Todos os direitos reservados.</p>
+      <p>&copy; 2026 Mundo da Tia Ana - Todos os direitos reservados</p>
     </div>
 
   </footer>
